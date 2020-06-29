@@ -1,0 +1,80 @@
+I’m a front end developer, entrepreneur, and dancer. 
+
+
+Inspiration for the start of my personal site: 
+Copy, layout, and content:
+https://meowni.ca/
+https://www.taniarascia.com/
+
+General concept:
+Tania used the term digital garden? What is that?
+Google Returns:
+https://joelhooks.com/digital-garden
+https://tomcritchlow.com/2019/02/17/building-digital-garden/
+https://dev.to/jbranchaud/the-digital-garden-l10
+
+Joel Hooks
+Funny, because I actually love to garden. I wonder if he does IRL too.
+- "What makes a garden is interesting. It's personal. Things are organized and orderly, but with a touch of chaos around the edges."
+Sweet. Totally relieves the pressure to be perfect or even good. My IRL is still terrible, but after several years on the the way to something really beautiful. I just started in a corner and it continued. Good state of mind to have for this project.
+- "Chronologically sorted pages of posts aren't how people actually use the internet."
+One day I will duplicate the search abilities of his site.
+Further Reading: 
+ - Amy Hoy. How the Blog Broke the Web https://stackingthebricks.com/how-blogs-broke-the-web/ 
+ - Tom Critchlow. Building a Digital Garden https://tomcritchlow.com/2019/02/17/building-digital-garden/
+
+Amy Hoy
+Well, this article certainly appeals to my 1994 - 2000 nostalgia and DIY personality. Lovely history lesson. Uses the a new gif on home page. Reminds me of Monica and her pixel emojis. Nice to know it is ok to build without a CMS, people did it back in the 1990s.
+
+Tom Critchlow
+"Streams, Campfires, and Gardens"
+
+Stream: instagram / Facebook ... add twitter?
+Campfires: ... what's a campfire for Tom?
+https://tomcritchlow.com/2018/10/10/of-gardens-and-wikis/
+"Connection forming, thinking out loud, self referencing and connection forming." Being new my connections are new and mostly involve interacting on other blogs, SO chats, and a few mentors.
+Gardens: ... what's Tom's garden?
+"For my personal garden (note: your requirements and needs might be different!) I set out to build something that would focus on stock over flow, be a blogging product without a publish button and create a space for collecting the dots.
+Are.na? - no."
+
+What's stock and flow?
+reference: http://snarkmarket.com/2010/4890
+"Flow is the feed. It’s the posts and the tweets. It’s the stream of daily and sub-daily updates that reminds people you exist.
+
+Stock is the durable stuff. It’s the content you produce that’s as interesting in two months (or two years) as it is today. It’s what people discover via search. It’s what spreads slowly but surely, building fans over time."
+
+The durable stuff concept resonates. I have many long term projects that are hard to see the progress of on Facebook / instagram. I've only got stream. Stream is very hard to present and makes it seem (and me feel) like my 'life work' is meaningless unless I've got something interesting to contribute every day.
+
+He also uses a files and folders system. Works for me.
+
+Josh Branchaud
+Written Feb 28 2020. Ok, so this digital garden / internet sucks and we are going to make is some different now is a trend? Back to Tania's site, oh she redesigned it! No photo, new post: https://www.taniarascia.com/another-website-redesign/
+
+Tania
+"Although the tide is against me, I want to make the internet a better place. Even if it's just right here. I hope I will inspire others to make their own creative corner of the web."
+
+Are quality websites coming back again? Maybe it won't rise like the popularity of podcasts, they are too hard to make. Unless... they were allowed to be simple? I am kind of shocked to find so many people who I'm resonating with here. But, I supposed I'm of that demographic. Born 1988. Raised with the internet. The big difference is I didn't purse it earlier. Well, I'm here now!
+
+Conclusion:
+It can be what I want it to be.
+My garden doesn't have to start amazing, nor do the plants.
+First: start. It will grow.
+
+Site goal:
+
+First draft:
+This website is a portfolio, catalogue of my personal projects, and functions as a sharing platform.
+
+Sharing platform is redundant. If its public on the web, its being shared. Portfolio... like... an artist? Like I"m a job seeker? Frames site for observing and others. Frame needs to stay personal. Personal projects is redundant since I'm not part of larger projects yet. Goal is to share both programming projects and non programming projects, information can be delayed in a way that will make it obvious one way or another, doesn't need to be in site goal.
+
+Second draft:
+
+This website catalogues my projects and shares the process.
+
+Shares? On the fence redundant, is there a better word?
+
+Third draft:
+
+I’m a front end developer, entrepreneur, and dancer. This website catalogues my projects and details the process.
+
+Do I want to add anything about longer thought pieces? For now, no, because I don't feel I have anything valuable enough to contribute to the conversion. I can update this in future if need be.

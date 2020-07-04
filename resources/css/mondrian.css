@@ -1,0 +1,16 @@
+.mondrian-wrapper{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(50, 1fr);
+}
+
+.red{
+    grid-column-start: 1;
+    grid-column-end: 22;
+    grid-row-start: 1;
+    grid-row-end:27;
+    background-color:red;
+}

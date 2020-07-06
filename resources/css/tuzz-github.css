@@ -18,6 +18,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+
+
 body {
     font-family: Helvetica, arial, sans-serif;
     font-size: 14px;
@@ -27,9 +29,29 @@ body {
     background-color: white;
     padding: 30px;
     color: #333;
+    max-width: 800px;
+    margin: 0 auto;
   }
-  
-  body > *:first-child {
+
+.grid-container {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    padding: 20px;
+    gap: 1em;
+}
+
+.row {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.right {
+    justify-self: end;
+}
+
+body > *:first-child {
     margin-top: 0 !important;
   }
   

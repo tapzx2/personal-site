@@ -3,7 +3,7 @@
     --blue-color:#09458e;
     --yellow-color:#fad853;
 
-    --white-color:#ffffff;
+    --white-color:#fdfdfd;
     --black-color:#151515;
   }
 
@@ -11,10 +11,11 @@
     grid-column-start: 1;
     grid-column-end: 4;
     width:minmax(200px, 800px);
-    max-height: 760px; /* set programatically to scale properly with js */
     display: grid;
     grid-template-columns: repeat(100, 1fr);
     grid-template-rows: repeat(100, 1fr);
+    box-shadow: 10px 10px 5px 1px rgba(0, 0, 0, 0.425);
+    margin: 10px;
 }
 
 .red{ /* 42 wide by 52 high */

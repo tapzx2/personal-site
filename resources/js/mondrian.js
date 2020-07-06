@@ -1,12 +1,15 @@
-const grid = document.querySelector(".mondrian-wrapper")
+    const grid = document.querySelector(".mondrian-wrapper")
 
 
-function resizeGrid() {
-    grid.style.height = `${grid.clientWidth}px`
-}
+    function resizeGrid() {
+        grid.style.height = `${grid.clientWidth}px`
+    }
 
-//on load set height to width
-resizeGrid();
+    //on load set height to width
+    resizeGrid();
 
-// on window resize
-window.addEventListener('resize', resizeGrid);
+    // on window resize
+    window.addEventListener('resize', resizeGrid);
+
+    const unorderedList = document.querySelector("ul");
+    console.log(unorderedList)

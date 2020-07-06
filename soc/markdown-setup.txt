@@ -1,0 +1,94 @@
+I don’t want to write because it is a big pain to write and format a lot of html text. Writing in plain text or Evernote so far has been the best. I do remember a small project from www.gomakethings.com that involved markdown. I didn’t give it much thought at the time. But now, I’m going to look into it a bit more.
+
+
+https://www.markdownguide.org/
+Ok, so markdown is thing.
+
+https://blot.im/
+Very cool, but not exactly what I'm looking for.
+
+https://www.markdownguide.org/tools/github-pages/
+Closer. I'm publishing everything on GitHub right now...
+
+site: https://gomakethings.com/ "markdown"
+Not the Wordpress article.
+Tech behind JS ed platform - fascinating
+JAMStack article - so that's what that is!
+
+Ok, but where was that markdown project...It was the mirror text project.
+https://marked.js.org/#/README.md#README.md
+Ok, this is closer. But maybe still a little too much friction here.
+
+https://dillinger.io/ is essentially how I'd want to write, what I'm looking for is the way too render it / integrate it with my site.
+
+Google: render markdown to html
+https://zapier.com/blog/markdown-html-export/
+Ok, zapier, I guess you write tutorials for my skill level. Thanks.
+https://twitter.com/maguay/ wrote it
+Now founded https://twitter.com/capiche
+https://capiche.com/ interesting niche that I myself as a small business owner have wanted. I'll come back to this one day.
+
+https://ia.net/writer
+Well, its pretty and I want it. Does it export to html?
+https://ia.net/writer/support/mac/import-export-share
+Yes.
+
+https://dillinger.io/
+Converts to html and is rendered on page. Do they let me see it? Yes, they do. I can also have access the styled version. Wow, the styled version is heavy. Maybe not that.
+
+https://markdowntohtml.com/
+This is exactly the mirror text app I wrote with added functionality. Oh, it has css support. Ok, a little fancier.
+
+Wait. What I'm looking for is a bit lost. Take a step back. What exactly am I trying to accomplish here?
+
+I want to be able to write in a text editor (like this one) and then display that information on my personal site. Where on your personal site? Well, I'd like to be able to include the SOC logs for my projects. Maybe as blog posts by day? The process summary page is the first priority though. In process summary I could link to SOC.
+
+Ok, process summary is what I want to display.
+1. Write in markdown
+2. Export as html
+3. Add html to site page
+4. Style
+
+Styling is I think my hangup right now when I visualize myself doing a walkthrough of the process. Its css, don't freak out. But, I want my css to be a simple, single file applicable to all pages on the site. Ok, so If I'm going to be using the markdown system I'll have to make some tweaks to that file and that's ok. Probably more than tweaks, but I've re written the file twice already, I can do it again.
+
+Consider making a process page template? With link ref filled in, nav, and a /* put markdown > HTML content here */ section.
+
+Ok, steps 3 and 4 are handled. Need steps 1 and 2. https://dillinger.io/ is a possibility, but it is ugly, internet dependent, and what the heck are all those classes and data- things in the html? Do I need those? Probably not.
+
+https://markdowntohtml.com/ is a possibly but is internet dependent and kinda ugly too. I'm find with how it generates the html though.
+
+https://marked2app.com/ is an option. I'm not build about their website. There are some design things that make me nervous it isn't going to be good. It does have a free trial though. Price: $14
+
+https://ia.net/downloads this is the one I want visually. Read all the negative reviews. Main recent complaint is from people who don't know how to research what they're buying. 6 years ago they upset a lot of people with a bad update. I think that's it. Ohhh, but it stores my files in a strange strange location. Can I change that? Yes, I can. I've set it to my google backed up drive location. Exporting to HTML works fine. What about pdf preview? The heck? A return means nothing. Two means new paragraph. Shift return makes a single line break. Similar to Facebook. I like the format menu has what I want and then I can teach myself markdown through a gui like I'm used to. Love the look. Exporting to pdf? There are no options here to change font etc. Investigate...
+
+Ok, so you can use templates. There are no example templates. Looking at GitHub this part of the project hasn't been touched in 4 years. For authors trying to write books / documents? Kind of frustrating maybe since they aren't super technical. Also, there are a ton of tools out there for making really pretty documents. Maybe there's no need. What would I use it for? Not my main use case. But, it could a fun project to make some pdf styles and see if I can get them on GitHub.
+
+Can this replace Evernote? Mayyyybe. The big success with Evernote is that I have access to all my text files across devices and I can store images like screenshots without a huge hassle. Ok, so no. This would be just for making text content on websites.
+
+Atom can do markdown. Is there a plug in to convert it to HTML? Let's check vs code. https://code.visualstudio.com/docs/languages/markdown https://code.visualstudio.com/api/extension-guides/markdown-extension Well, there's a way to write in markdown and preview in VS Code and it looks like there are some tools to generate the html from it. This would be really nice if I'm constantly making edits to a page and I could see it being part of a system that allows you to make changes in just one place and the refresh everything. Might be too much setup for me right now. My primary focus is to produce content for my web page. I could see switching over to this system if I have a 'digital garden' at some point.
+
+Dillinger: no.
+MarkdowntoHTML: meh.
+Marked 2: try.
+iA writer: try.
+VS Code: not yet.
+
+What's John Gruber's site like? https://daringfireball.net/ 45 minutes later... Also: https://popular.info/
+
+Ok, 25 minutes left on the 3 hour timer, I've got iA, its what I think I probably want, let's give it a spin in the work flow.
+
+Timer ran out.
+
+Current status:
+1. How to add image? How would this work in the work flow?
+2. Keep writing - finish post
+3. Add to Site
+
+Questions:
+- Is iA where I want to do my SOC writing? How would this work with how they organize libraries?
+
+Wow, ok, 4 is not handled. Getting the markdown to HTML is easy peasy lemon squeezy. Styling that HTML to look like what it does in iA or on GitHub is NOT going to be easy. I do feel like this is a stepping off point where it isn't about making it all myself, that I should learn how to install some one else's work. That what I can focus on my contribution instead of reinventing the wheel.
+
+Ok, found someone who as written GitHub style css (circa 2014, but still). I'll try to implement this tomorrow.
+
+https://gist.github.com/tuzz/3331384

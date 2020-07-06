@@ -7,12 +7,17 @@
 
         <link rel="stylesheet" href="resources/css/styles.css">
         <link rel="stylesheet" href="resources/css/mondrian.css">
+        <link rel="stylesheet" href="resources/css/tuzz-github.css">
     </head>
     <body>
         <div class="wrapper">
             <nav class="right">
                 <a href="index.html">home</a> | <a href="resume.html">resume</a> | <a href="#">about</a>
             </nav>
+            <div class="row"><h1>Mondrian Project</h1>
+                <h2>Recreating <em>Composition No. III, with Red, Blue, Yellow, and Black, 1929</em> with CSS Grid</h2>
+            </div>
+            
             <div class="mondrian-wrapper">
                 <div class="red"></div>
                 <div class="black"></div>
@@ -28,7 +33,61 @@
                 <div class="black6"></div>
                 <div class="white4"></div>
             </div>
+            <div class="row">
+                
+                
+                <h4>Assignment</h4>
+                
+                <ul>
+                <li>Recreate Composition No. III using CSS Grid</li>
+                <li>Make it responsive</li>
+                </ul>
+                
+                <h4>Process</h4>
+                
+                <p>The assignment was inspired by the <a href="https://www.youtube.com/watch?v=qNtJ5p3h2A4&amp;feature">Mongrid</a> project.</p>
+                
+                <ol>
+                <li><strong>Map the dimensions</strong><br/>
+                I laid a Photoshop grid over the painting. This would serve as my model for what the CSS Grid should be. I smallest grid lines to the smallest width of any shape (16.5) and the largest to 132px. If I were to do this again I would have set largest to 165.<br/>
+                <br/>
+                </li>
+                <li><strong>Translate to Grid</strong><br/>
+                On a 100 x 100 grid, going left to right I filled grid column/row start/end for each shape.<br/>
+                <code>grid-column-start: 1;
+                grid-column-end: 43;
+                grid-row-start: 1;
+                grid-row-end:55;</code><br/>
+                <br/>
+                </li>
+                <li><strong>Make it responsive</strong><br/>
+                I was having trouble doing this with CSS and Grid. So, I decided to use Javascript.<br/>
+                <br/>
+                <code>const grid = document.querySelector(&quot;.mondrian-wrapper&quot;)
+                function resizeGrid() {
+                  grid.style.height = ${grid.clientWidth}px
+                }
+                //on load set height to width
+                resizeGrid();
+                //on window resize
+                window.addEventListener('resize', resizeGrid);</code><br/>
+                <br/>
+                I don't know if this is the accepted way to do this, but it worked in the browser and mobile.<br/>
+                <br/>
+                </li>
+                <li><strong>Fix the colors</strong><br/>
+                I updated the grid colors by sampling the hex codes from original image. I also set the colors to be CSS variables. I love variables so much.</li>
+                </ol>
+                
+                <h4>Reflection</h4>
+                
+                <p>I didn't watch <a href="https://www.youtube.com/watch?v=qNtJ5p3h2A4&amp;feature">Mongrid</a> project video before starting. I probably should have. In all, it took me 2.5 hrs to recreate Composition III in CSS Grid and another 20 minutes to plug it into my portfolio site. I had fun doing this project!</p>
+            </div>
+
         </div>
+
+
+        
         <script src="resources/js/mondrian.js"></script>
-    </body>
+        </div>
 </html>

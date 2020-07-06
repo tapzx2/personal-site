@@ -37,7 +37,6 @@ body {
     max-width: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
     padding: 20px;
     gap: 1em;
 }
@@ -49,6 +48,12 @@ body {
 
 .right {
     justify-self: end;
+}
+
+.col-two-three{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-self: center;
 }
 
 body > *:first-child {

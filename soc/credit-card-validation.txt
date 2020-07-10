@@ -1,0 +1,23 @@
+Google: What do credit card forms look like?
+
+https://uxdesign.cc/the-anatomy-of-a-credit-card-payment-form-32ec0e5708bb
+
+Ok, from 2015 a little old. "The latest HTML spec includes specifications for credit card inputs"
+
+https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-autocomplete-cc-number
+
+The hell is this? Back to home page of site...
+
+Is this the actual specs for HTML? Why is this the first time I'm seeing this?  It is explicitly defining how to make credit card forms in HTML and all the features that are supported. It has the answers to all these formatting questions I've had. How to do names!
+
+Wow, there's a crap ton of information here. It will take me a minute to understand the organization of the site and find what I'm looking for.
+
+<p><label>Credit card number:
+                <input name="cc" type="text" inputmode="numeric" pattern="[0-9]{8,19}" autocomplete="cc-number">
+</label></p>
+
+"The type=number state is not appropriate for input that happens to only consist of numbers but isn't strictly speaking a number. For example, it would be inappropriate for credit card numbers or US postal codes. A simple way of determining whether to use type=number is to consider whether it would make sense for the input control to have a spinbox interface (e.g. with "up" and "down" arrows). Getting a credit card number wrong by 1 in the last digit isn't a minor mistake, it's as wrong as getting every digit incorrect. So it would not make sense for the user to select a credit card number using "up" and "down" buttons. When a spinbox interface is not appropriate, type=text is probably the right choice (possibly with an inputmode or pattern attribute)."
+
+This gives me a hack to remove the spin box as well. But, there's got to be a standard solution since I can't find it anywhere else on forms. Maybe this is it?
+
+Ok, back to project. What does my form need? Back to 

@@ -14,6 +14,10 @@ img {
 .small {
     max-width:180px;
 }
+
+.medium {
+    max-width: 400px;
+}
 /* below 560 "too close for grid, switching to flex"*/
 @media only screen and (max-width: 560px){
     body{

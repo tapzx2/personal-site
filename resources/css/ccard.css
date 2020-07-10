@@ -1,0 +1,33 @@
+.ccard-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border:1px solid black;
+    border-radius: 5%;
+    width:400px;
+    line-height: 1.2;
+    
+}
+
+.form-title {
+    grid-column: span 2;
+    background-color: grey;
+    text-align: center;
+    padding: 28px;
+}
+
+.card-images {
+    grid-column: span 2;
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+.ccard-margin{
+    margin-left:28px;
+}
+
+.ammount{
+    font-size: 170%;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+

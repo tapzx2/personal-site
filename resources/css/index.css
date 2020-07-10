@@ -18,6 +18,11 @@ img {
 .medium {
     max-width: 400px;
 }
+
+.culdesac-nav{
+    display:flex;
+    justify-content: space-evenly;
+}
 /* below 560 "too close for grid, switching to flex"*/
 @media only screen and (max-width: 560px){
     body{

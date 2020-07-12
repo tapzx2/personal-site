@@ -19,9 +19,23 @@ img {
     max-width: 400px;
 }
 
+.icon{
+    box-shadow: none;
+    max-width: 50px;
+    margin: 20px;
+}
+
 .culdesac-nav{
     display:flex;
     justify-content: space-evenly;
+}
+
+.culdesac-footer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 /* below 560 "too close for grid, switching to flex"*/
 @media only screen and (max-width: 560px){
@@ -37,6 +51,7 @@ img {
     img{
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 30px;
         display: block;
     }
     .round-img{
@@ -53,6 +68,14 @@ img {
     {
         margin-top: 30px;
         max-width: 160px;
+    }
+
+    .social-icons a{
+        display: inline-block;
+    }
+
+    .icon{
+        margin: 10px;
     }
     
 }

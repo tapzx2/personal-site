@@ -35,19 +35,37 @@
 import os
 import re
 
-index = os.path.expanduser("~/personal-site/www/index.html")
+www = os.path.expanduser("~/personal-site/www/")
 layout = os.path.expanduser("~/personal-site/layout/")
 
+prehead = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+"""
+
+posthead = """</title>
+</head>
+<body>"""
+
+tail = """</body>
+</html>
+"""
+
 # clear and make freshhhhhhhh
-if os.path.isfile(index):
-    os.remove(index)
-    file = open(f"{index}", "w")
-    file.close()
+def startFresh(file):
+    if os.path.isfile(file):
+        os.remove(file)
+        file1 = open(f"{file}", "w")
+        file1.close()
 
 
 # write output to file
-def append(string):
-    file1 = open(index, "a")
+def append(string, file):
+    file1 = open(file, "a")
     file1.write(string)
     file1.close()
 
@@ -66,17 +84,64 @@ def cleanUp(string):
 def striphtml(string):
     return string.replace(".html", "")
 
+# def getTitle(page):
+#   if page is .html
+#     read file
+#     find <h1> tag
+#     return inner contents of <h1> tag
+#   elif page is directory
+#     return cleanUp(page)
+def getTitle(file):
+    return "TITLE"
 
-head = """<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-"""
+# def buildBlurbBody(page):
+#    body = ""
+#    blurbs = list(contentes of page).reverseSort
+#    for blurb in blurbs:
+#       body += blurb
+#    return body
+def buildBlurbBody(input):
+    return "blurbbodystring"
+
+# write components of html file
+def buildHtml(input, saveLoc, name):
+    if os.path.isfile(input):
+        page = saveLoc + stripSort(name)
+        with open(input, 'r') as body:
+            body = body.read()
+    else:
+        page = saveLoc + stripSort(name) + ".html"
+        body = input
+
+    startFresh(page)
+    append(prehead, page)
+    append(getTitle(input), page)
+    append(posthead, page)
+    append(body, page)
+    append(tail, page)
+
+# main
+headers = sorted(os.listdir(layout))
+for h3 in headers:
+    if os.path.isdir(layout+h3):
+        for name in sorted(os.listdir(layout+h3)):
+            path = layout+h3+"/"+name
+            if name[-5:] == ".html":
+                #print("item is html: " + item)
+                buildHtml(path, www, name)
+            elif os.path.isdir(path):
+                print("item is directory: " + name)
+                buildHtml(buildBlurbBody(path), www, name)
+            else:
+                print("item is neither .html file or directory: " + name)
+
+
+
+
+
+
+
+
 
 body = ""
 headers = sorted(os.listdir(layout))
@@ -90,11 +155,3 @@ for h3 in headers:
                 else:
                     body += f'<p><a href="{stripSort(link)}">{striphtml(cleanUp(link))}</a></p>' + '\n'
 
-tail = """</body>
-</html>
-"""
-
-
-append(head)
-append(body)
-append(tail)

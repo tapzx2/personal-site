@@ -1,37 +1,4 @@
-# build content
-
-# for item in layout
-#   if item is .html
-#      buildHtml(item)
-#   if item is directory
-#      buildHtml(buildBlurbBody(item))
-
-# def getTitle(page):
-#   if page is .html
-#     read file
-#     find <h1> tag
-#     return inner contents of <h1> tag
-#   elif page is directory
-#     return cleanUp(page)
-
-# def buildHtml(page):
-#   if page is string:
-#      body = page
-#   else:
-#      body = read file
-#   append(prehead)
-#   append(getTitle(page))
-#   append(posthead)
-#   append(body)
-#   append(tail)
-
-# def buildBlurb(page):
-#    body = ""
-#    blurbs = list(contentes of page).reverseSort
-#    for blurb in blurbs:
-#       body += blurb
-#    return body
-
+from bs4 import BeautifulSoup
 import os
 import re
 
@@ -84,38 +51,54 @@ def cleanUp(string):
 def striphtml(string):
     return string.replace(".html", "")
 
-# def getTitle(page):
-#   if page is .html
-#     read file
-#     find <h1> tag
-#     return inner contents of <h1> tag
-#   elif page is directory
-#     return cleanUp(page)
-def getTitle(file):
-    return "TITLE"
 
-# def buildBlurbBody(page):
-#    body = ""
-#    blurbs = list(contentes of page).reverseSort
-#    for blurb in blurbs:
-#       body += blurb
-#    return body
-def buildBlurbBody(input):
-    return "blurbbodystring"
+def getTitle(input):
+    """
+    returns the first h1 contents of an html page
+    """
+    with open(input, 'r') as file:
+        file = file.read()
+    soup = BeautifulSoup(file, features="html.parser")
+    if soup.h1 is not None:
+        return soup.h1.string
+    else:
+        return "ERROR IN getTITLE FUNCTION"
 
-# write components of html file
+
+def buildBlurbBody(dir):
+    """
+    returns a string of the files in dir, reverse numerical sort
+    """
+    body = ""
+    blurbs = sorted(os.listdir(dir), reverse=True)
+    for blurb in blurbs:
+        path = dir + "/" + blurb
+        if os.path.isfile(path) and blurb[0] != ".":
+            with open(dir + "/" + blurb, 'r') as blurbName:
+                body += blurbName.read()
+    return body
+
+
 def buildHtml(input, saveLoc, name):
+    """
+    Writes an html file with parameters: html body, output location, and output file name. 
+    """
+    #print("input: " + input)
+    #print("saveLoc: " + saveLoc)
+    #print("name: " + name)
     if os.path.isfile(input):
         page = saveLoc + stripSort(name)
         with open(input, 'r') as body:
             body = body.read()
+        title = getTitle(input)
     else:
         page = saveLoc + stripSort(name) + ".html"
         body = input
+        title = cleanUp(name)
 
     startFresh(page)
     append(prehead, page)
-    append(getTitle(input), page)
+    append(title, page)
     append(posthead, page)
     append(body, page)
     append(tail, page)
@@ -130,28 +113,7 @@ for h3 in headers:
                 #print("item is html: " + item)
                 buildHtml(path, www, name)
             elif os.path.isdir(path):
-                print("item is directory: " + name)
+                #print("item is directory: " + name)
                 buildHtml(buildBlurbBody(path), www, name)
             else:
                 print("item is neither .html file or directory: " + name)
-
-
-
-
-
-
-
-
-
-body = ""
-headers = sorted(os.listdir(layout))
-for h3 in headers:
-    if h3[0] != ".":
-        body += f"<h3>{cleanUp(h3)}</h3>\n"
-        for link in sorted(os.listdir(layout+h3)):
-            if link[0] != ".":
-                if os.path.isdir(layout+h3+"/"+link):
-                    body += f'<p><a href="{stripSort(link)}.html">{cleanUp(link)}</a></p>' + '\n'
-                else:
-                    body += f'<p><a href="{stripSort(link)}">{striphtml(cleanUp(link))}</a></p>' + '\n'
-

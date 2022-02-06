@@ -18,7 +18,8 @@ prehead = """<!DOCTYPE html>
 
 posthead = """</title>
 </head>
-<body>"""
+<body>
+<a href="#" onclick="history.go(-1)">Back</a>"""
 
 tail = """</body>
 </html>

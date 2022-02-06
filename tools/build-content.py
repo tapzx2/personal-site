@@ -11,7 +11,8 @@ prehead = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/css/tuzz-github.css">
+    <link rel="stylesheet" href="resources/css/style.css">
     <title>
 """
 
@@ -24,6 +25,8 @@ tail = """</body>
 """
 
 # clear and make freshhhhhhhh
+
+
 def startFresh(file):
     if os.path.isfile(file):
         os.remove(file)
@@ -103,6 +106,7 @@ def buildHtml(input, saveLoc, name):
     append(posthead, page)
     append(body, page)
     append(tail, page)
+
 
 # main
 headers = sorted(os.listdir(layout))

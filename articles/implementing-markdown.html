@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Implementing Markdown</title>
+
+        <!--<link rel="stylesheet" href="resources/css/styles.css">-->
+        
+        <link rel="stylesheet" href="resources/css/tuzz-github.css">
+        <link rel="stylesheet" href="resources/css/index.css">
+        <link rel="stylesheet" href="resources/css/mondrian.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            <nav class="row right">
+                <a href="index.html">home</a> | <a href="resume.html">resume</a> | <a href="#">about</a>
+            </nav>
+            <div class="row">
+                <h1>Implementing Markdown</h1>
+
+                <h2>Developing a simple authoring system</h2>
+
+                <a href="https://www.markdownguide.org/" target="blank"><img src="resources/photos/markdown-icon.jpg" atl="markdown icon" class="small"></a>
+
+
+                <h4>Assignment</h4>
+
+                <ul>
+                <li>remove the friction in my web authoring process</li>
+                <li>without a cms or similar (Wordpress, Blogger, Squarespace)</li>
+                </ul>
+
+                <h4>Context</h4>
+
+                <p>I wanted to write about the process behind the projects I'm doing. Using HTML to markup diverse text that includes code blocks, multiple headers, lists and other elements, is a dauntingly time consuming proposition. Doubly so to keep it consistent from one writeup to another.</p>
+
+                <p>After some research, markdown seemed the appropriate solution.</p>
+
+                <img src="resources/photos/markdown-wrinting-in.jpg" atl="writing in markdown" class="medium">
+
+                <h4>Process</h4>
+
+                <ol>
+                <li><p>Write in markdown<br/>
+                Can be done in any basic text editor and a little help from a <a href="https://www.markdownguide.org/cheat-sheet/">syntax cheat sheet</a>.</p></li>
+                <li><p>Export as html<br/>
+                There are free tools to convert markdown to html online. I wanted something with even less friction and a few more tools. <a href="https://ia.net/writer">iA writer</a> fit the bill for me.</p></li>
+                <li><p>Add html to site page<br/>
+                Easy peasy. I made a template for process pages and now I could copy and paste the html into the appropriate div location.</p></li>
+                <li><p>Style<br/>
+                This is where things got tricky. From my project log:</p>
+
+                <blockquote>
+                <p>Wow, ok, 4 is not handled. Styling that HTML to look like what it does in iA or on GitHub is NOT going to be easy. I do feel like this is a stepping off point where it isn't about making it all myself, that I should learn how to install someone else's work. That way I can focus on my contribution instead of reinventing the wheel.</p>
+                </blockquote>
+
+                <p><a href="https://gist.github.com/tuzz/3331384">Chris Patuzzo's work</a> was the solution. He wrote CSS that replicates GitHub's styling of markdown.</p>
+
+                <p>After a couple tweaks, it was the perfect solution.</p></li>
+                </ol>
+
+                <h4>Reflection</h4>
+
+                <p>Looking back at the system, because it is so simple, it seems really underwhelming. Did this really take me 5 hours?</p>
+
+                <p>Looking at my project log, yes. And I needed it. It wasn't easy to arrive at a simple system that fit my needs. Every step of the process took research and testing.</p>
+
+                <p>But now, authoring content is very low friction. I write with markdown in iA writer, copy and paste the HTML, and push to GitHub why my site is displayed via GitHub pages. Easy peasy lemon squeezy.</p>
+            </div>
+
+        </div>
+        <script src="resources/js/mondrian.js"></script>
+    </body>
+</html>

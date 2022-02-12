@@ -11,11 +11,27 @@ front end practice</title>
 </head>
 <body>
 <a href="#" onclick="history.go(-1)">Back</a><div class="fem-card">
-<h1>Front End Mentor Practice</h1>
-<p>
-  I use the challenges on <a target="_blank" href="https://www.frontendmentor.io/">Front End Mentor</a> to practice and learn new skills.
-</p>
-</div><div class="fem-card">
+  <h1>Front End Practice</h1>
+  <p>
+    A collection of classes, self directed projects, and practice challenges
+    from
+    <a target="_blank" href="https://www.frontendmentor.io/">Front End Mentor</a
+    >.
+  </p>
+</div>
+<div class="fem-card">
+  <img src="resources/photos/pente-img.jpg" />
+  <h1>Pente Game</h1>
+  <p>
+    My first JavaScript project! Remade the game Pente. Site has instructions
+    (including animations!) and new / restart game behavior. Maybe one day it
+    will support players on different computers or a vs Computer option.
+  </p>
+  <a href="https://tapzx2.github.io/pente-game/#/">live</a>
+  <span> / </span>
+  <a href="https://github.com/tapzx2/pente-game">code</a>
+</div>
+<div class="fem-card">
 <img
   src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_700/Screenshots/qyd6tux59eepemeypzqh.jpg"
 />
@@ -49,6 +65,28 @@ front end practice</title>
   >code</a
 >
 </div><div class="fem-card">
+  <img src="resources/photos/mondrian.jpg" />
+  <h1>Mondrian Grid</h1>
+  <p>
+    A classic grid project from
+    <a target="_blank" href="https://jensimmons.com/">Jen Simmons</a>. My
+    implementation was a little different. I laid a Photoshop grid over the painting to create a more accurate replica of <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Piet_Mondrian_-_Composition_No._III,_with_red,_blue,_yellow_and_black,_1929.jpg">Composition No. III, with Red, Blue, Yellow, and Black, 1929</a>. Also, I was having trouble making the grid responsive with
+    just CSS. I decided to use Javascript.
+    <pre><code>
+      const grid = document.querySelector(".mondrian-wrapper"); 
+
+      function resizeGrid() { grid.style.height = `${grid.clientWidth}px` } //on load set height to width
+
+      resizeGrid(); // on window resize
+
+      window.addEventListener('resize', resizeGrid);
+      </code></pre>
+  </p>
+  <a href="https://tapzx2.github.io/pente-game/#/">live</a>
+  <span> / </span>
+  <a href="https://github.com/tapzx2/pente-game">code</a>
+</div>
+<div class="fem-card">
 <img
   src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_700/Screenshots/sdlgiw124enfcqdczq8a.jpg"
 />
